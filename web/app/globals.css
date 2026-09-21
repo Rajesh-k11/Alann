@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --alann-bg: #FEFEFE;
+  --alann-surface: #ECECF1;
+  --alann-primary: #340549;
+  --alann-secondary: #720488;
+  --alann-accent: #F3EBFA;
+  --alann-text: #1C1528;
+  --alann-subtext: #8A8A92;
+  --alann-border: rgba(52, 5, 73, 0.12);
+}
+
+.dark {
+  --alann-bg: #000000;
+  --alann-surface: #2A2138;
+  --alann-primary: #560267;
+  --alann-secondary: #C084FC;
+  --alann-accent: #15101F;
+  --alann-text: #F3EEFA;
+  --alann-subtext: #A193B8;
+  --alann-border: rgba(192, 132, 252, 0.18);
+}
+
+body {
+  background-color: var(--alann-bg);
+  color: var(--alann-text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Custom sleek automotive scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(114, 4, 136, 0.25);
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(192, 132, 252, 0.25);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(114, 4, 136, 0.5);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(192, 132, 252, 0.5);
+}
+

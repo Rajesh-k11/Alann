@@ -1,0 +1,15 @@
+{
+  "name": "@alann/orb-core",
+  "version": "1.0.0",
+  "description": "Platform-independent core animation engine, color tokens, and geometry for ALANN AI Thinking Orb",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": ["alann", "ai-orb", "thinking-orb", "canvas", "skia"],
+  "author": "ALANN AI Team",
+  "license": "MIT"
+}
+

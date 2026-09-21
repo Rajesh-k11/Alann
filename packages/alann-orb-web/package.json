@@ -1,0 +1,21 @@
+{
+  "name": "@alann/orb-web",
+  "version": "1.0.0",
+  "description": "Production Next.js and React Canvas-based AI Thinking Orb for ALANN",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@alann/orb-core": "^1.0.0"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "author": "ALANN AI Team",
+  "license": "MIT"
+}
+

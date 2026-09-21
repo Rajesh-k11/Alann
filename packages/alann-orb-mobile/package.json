@@ -1,0 +1,29 @@
+{
+  "name": "@alann/orb-mobile",
+  "version": "1.0.0",
+  "description": "Production React Native AI Thinking Orb for ALANN with @shopify/react-native-skia support and modular fallback",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@alann/orb-core": "^1.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-native": ">=0.71.0"
+  },
+  "peerDependenciesMeta": {
+    "react-native": {
+      "optional": true
+    },
+    "@shopify/react-native-skia": {
+      "optional": true
+    }
+  },
+  "author": "ALANN AI Team",
+  "license": "MIT"
+}
+
