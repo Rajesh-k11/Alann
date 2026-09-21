@@ -231,3 +231,41 @@ export interface AlannThinkingOrbProps {
 }
 ```
 
+---
+
+## 9. Netlify Deployment
+
+This repository is pre-configured for one-click deployment to [Netlify](https://www.netlify.com).
+
+### Key Files
+- [`netlify.toml`](file:///e:/Alann%20Animation/netlify.toml): Configures the build command (`npm run build`), publish directory (`web/out`), Node 20 runtime, security headers, and single-page application redirects.
+- [`web/next.config.mjs`](file:///e:/Alann%20Animation/web/next.config.mjs): Configured with `output: 'export'` and `images: { unoptimized: true }` for pure static export.
+- [`.gitignore`](file:///e:/Alann%20Animation/.gitignore): Explicitly excludes `web/.next/` and `web/out/` from version control.
+
+### Deployment Options
+
+#### Option A: Connect via Netlify Web UI (Recommended)
+1. Push your repository to GitHub / GitLab / Bitbucket.
+2. Log in to **Netlify** and click **Add new site** > **Import an existing project**.
+3. Select your repository.
+4. Netlify will automatically detect [`netlify.toml`](file:///e:/Alann%20Animation/netlify.toml):
+   - **Base directory**: (leave blank or `.`)
+   - **Build command**: `npm run build`
+   - **Publish directory**: `web/out`
+5. Click **Deploy site**.
+
+#### Option B: Deploy via Netlify CLI
+```bash
+# Install Netlify CLI globally
+npm install -g netlify-cli
+
+# Log in
+netlify login
+
+# Deploy preview
+netlify deploy
+
+# Deploy to production
+netlify deploy --prod
+```
+
