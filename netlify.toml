@@ -12,6 +12,7 @@
 [build.environment]
   NODE_VERSION = "20"
   NPM_FLAGS = "--include=optional"
+  NPM_FLAGS = "--legacy-peer-deps"
 
 # Single-Page Navigation Fallback
 [[redirects]]
