@@ -1,1 +1,26 @@
-node_modules
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Next.js Build Output
+.next/
+web/.next/
+
+# Build & Distribution Outputs
+dist/
+build/
+.turbo/
+
+# Logs & Diagnostics
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Environment & Local Files
+.env*.local
+.DS_Store
+*.pem
+
+# TypeScript Cache
+*.tsbuildinfo
