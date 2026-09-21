@@ -2,9 +2,11 @@
 node_modules/
 **/node_modules/
 
-# Next.js Build Output
+# Next.js Build & Export Output
 .next/
 web/.next/
+out/
+web/out/
 
 # Build & Distribution Outputs
 dist/
@@ -24,3 +26,4 @@ yarn-error.log*
 
 # TypeScript Cache
 *.tsbuildinfo
+

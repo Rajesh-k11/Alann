@@ -1,0 +1,40 @@
+# ==============================================================================
+# Netlify Configuration for ALANN AI Orb Monorepo
+# ==============================================================================
+
+[build]
+  # Build the Next.js web application from the workspace
+  command = "npm run build"
+  
+  # Directory containing the static export (index.html, 404.html, _next)
+  publish = "web/out"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NPM_FLAGS = "--include=optional"
+
+# Single-Page Navigation Fallback
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# ------------------------------------------------------------------------------
+# Cache Control & Performance Headers
+# ------------------------------------------------------------------------------
+
+# Immutable caching for static hashed assets
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Security and clean response headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
